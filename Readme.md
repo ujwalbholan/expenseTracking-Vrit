@@ -164,20 +164,66 @@ python manage.py runserver
 **Success Response:** `201 Created`
 
 ### 2. Get All Incomes
+**pagination way**
 
 **GET** `/income/api/getAllIncomes/?page=1&per_page=5`
+
 **Response:**
 
 ```json
 {
-  "count": 50,
-  "results": [ { "id": 1, ... } ]
+    "count": 19,
+    "num_pages": 10,
+    "current_page": 2,
+    "results": [
+        {
+            "id": 3,
+            "name": "Monthly ",
+            "amount": 200.0,
+            "tax": 50.0,
+            "tax_type": "flat",
+            "transaction_type": "debit",
+            "total": 250.0,
+            "source": "salary",
+            "date": "2025-06-18",
+            "notes": ""
+        },
+        {
+            "id": 4,
+            "name": "Monthly ",
+            "amount": 200.0,
+            "tax": 50.0,
+            "tax_type": "flat",
+            "transaction_type": "debit",
+            "total": 250.0,
+            "source": "salary",
+            "date": "2025-06-18",
+            "notes": ""
+        },
+        .......
+    ]
 }
 ```
 
 ### 3. Get Income by ID
 
 **GET** `/income/api/getIncomeById/?id=3`
+
+
+```json
+{
+    "id": 3,
+    "name": "Monthly Salary",
+    "amount": 200.0,
+    "tax": 50.0,
+    "tax_type": "flat",
+    "transaction_type": "debit",
+    "total": 250.0,
+    "source": "salary",
+    "date": "2025-06-18",
+    "notes": "ok"
+}
+```
 
 ### 4. Edit Income
 
@@ -229,12 +275,64 @@ python manage.py runserver
 ```
 
 ### 2. Get All Expenses
+**pagination way**
 
 **GET** `/expense/api/getAllExpense/?page=1&per_page=5`
+
+```json
+{
+    "count": 19,
+    "num_pages": 10,
+    "current_page": 2,
+    "results": [
+        {
+            "id": 3,
+            "name": "Monthly ",
+            "amount": 200.0,
+            "tax": 50.0,
+            "tax_type": "flat",
+            "transaction_type": "debit",
+            "total": 250.0,
+            "source": "salary",
+            "date": "2025-06-18",
+            "notes": ""
+        },
+        {
+            "id": 4,
+            "name": "Monthly ",
+            "amount": 200.0,
+            "tax": 50.0,
+            "tax_type": "flat",
+            "transaction_type": "debit",
+            "total": 250.0,
+            "source": "salary",
+            "date": "2025-06-18",
+            "notes": ""
+        },
+        .......
+    ]
+}
+```
+
+
 
 ### 3. Get Expense by ID
 
 **GET** `/expense/api/getExpenseById/?id=2`
+```json
+{
+    "id": 2,
+    "name": "Monthly",
+    "amount": 200.0,
+    "tax": 50.0,
+    "tax_type": "flat",
+    "transaction_type": "debit",
+    "total": 250.0,
+    "source": "salary",
+    "date": "2025-06-18",
+    "notes": "hello"
+}
+```
 
 ### 4. Edit Expense
 
