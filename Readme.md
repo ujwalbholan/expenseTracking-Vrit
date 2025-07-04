@@ -42,7 +42,7 @@ Expense-Trac-Vrit is a **RESTful API** for managing user **authentication**, **i
 ### Installation
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/ujwalbholan/expenseTracking-Vrit.git
 cd expense-trac-vrit
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
