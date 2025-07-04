@@ -296,3 +296,6 @@ python manage.py runserver
 ## 🎉 Happy Coding!
 
 For any issues or contributions, feel free to fork or raise an issue on the repository.
+
+## Note
+I have shared the postman collection json file.it has all the Api routs there after you run the project you can import the postman collection json file in the postman and check the Api.
